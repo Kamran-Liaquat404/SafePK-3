@@ -1314,12 +1314,11 @@
             </div>
         `;
 
-        // Inject FIA Helpline templates in all placeholder views
-        document.querySelectorAll('.fia-banner-element').forEach(el => {
-            el.innerHTML = fiaHelplineTemplate;
-        });
+const homeFiaBanner = document.querySelector('#view-home .fia-banner-element');
 
-        lucide.createIcons();
+if (homeFiaBanner) {
+    homeFiaBanner.innerHTML = fiaHelplineTemplate;
+}
 
         // ==================== TOOLS TAB SWITCHER LOGIC ====================
         const tabs = {
