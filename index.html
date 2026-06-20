@@ -1291,6 +1291,13 @@
             </div>
         `;
 
+        // Inject FIA Helpline templates in all placeholder views
+        document.querySelectorAll('.fia-banner-element').forEach(el => {
+            el.innerHTML = fiaHelplineTemplate;
+        });
+
+        lucide.createIcons();
+
         // ==================== TOOLS TAB SWITCHER LOGIC ====================
         const tabs = {
             'checker': { btn: document.getElementById('tab-checker'), container: document.getElementById('container-checker') },
