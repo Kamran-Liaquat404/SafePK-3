@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePK | Leading Digital Cybersecurity Awareness Platform</title>
+    
+    <!-- PWA settings -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#10b981">
+    
+    <!-- SEO Metadata -->
+    <meta name="title" content="SafePK | Leading Digital Cybersecurity Awareness Platform">
+    <meta name="description" content="SafePK is an offline-accessible threat evaluation and security awareness platform. Analyze password strength, generate complex cryptographic keys, complete device audits, and structure incident logs.">
+    <meta name="keywords" content="safepk, cybersecurity pakistan, digital safety, fia cyber crime, easypaisa scam awareness, whatsapp security pakistan, password generator">
+    <meta name="author" content="SafePK Platform Engineering">
+
+    <!-- Open Graph / Facebook / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://safepk.org/">
+    <meta property="og:title" content="SafePK | Leading Digital Cybersecurity Awareness Platform">
+    <meta property="og:description" content="SafePK is an offline-accessible threat evaluation and security awareness platform. Analyze password strength, generate complex cryptographic keys, complete device audits, and structure incident logs.">
+    <meta property="og:image" content="./logo.png">
+
+    <!-- Twitter Preview Cards -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://safepk.org/">
+    <meta property="twitter:title" content="SafePK | Leading Digital Cybersecurity Awareness Platform">
+    <meta property="twitter:description" content="SafePK is an offline-accessible threat evaluation and security awareness platform. Analyze password strength, generate complex cryptographic keys, complete device audits, and structure incident logs.">
+    <meta property="twitter:image" content="./logo.png">
+
+    <!-- Google Search Rich Snippet Image -->
+    <meta itemprop="name" content="SafePK | Leading Digital Cybersecurity Awareness Platform">
+    <meta itemprop="description" content="SafePK is an offline-accessible threat evaluation and security awareness platform. Analyze password strength, generate complex cryptographic keys, complete device audits, and structure incident logs.">
+    <meta itemprop="image" content="./logo.png">
+    <link rel="image_src" href="./logo.png">
+
+    <!-- Favicon Links using Logo PNG -->
+    <link rel="icon" type="image/png" href="./logo.png">
+    <link rel="apple-touch-icon" href="./logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#020617',
+                            900: '#0f172a',
+                            850: '#1e293b',
+                            800: '#334155',
+                            750: '#1e293b',
+                            700: '#475569'
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            950: '#022c22'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Style Sheet Links - Local Assets -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- jsPDF Library for client-side professional PDF reports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-emerald-500/35 selection:text-white">
+
+    <!-- Header / Navbar Element -->
+    <!-- Urdu Comment: Mobile responsive single-page container routing setup based on URL hashes -->
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding Logomark -->
+                <a href="#home" class="flex items-center group">
+                    <div class="relative p-1 bg-emerald-950/40 border border-emerald-500/25 rounded-xl group-hover:border-emerald-400/60 transition-colors flex items-center justify-center">
+                        <img src="./logo.png" alt="SafePK Logo" class="h-9 w-9 rounded-lg object-contain group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
+                        <div class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-emerald-400 rounded-full"></div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Items (Short Forms used exactly as intent requested) -->
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-all duration-250 bg-emerald-950/66 border border-emerald-500/30 text-emerald-300 shadow-[0_0_15px_-3px_rgba(16,185,129,0.2)]">Home</a>
+                    <a href="#tools" class="px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-200 text-slate-300 hover:bg-slate-800 hover:text-white border border-transparent">Tools</a>
+                    <a href="#learn" class="px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-200 text-slate-300 hover:bg-slate-800 hover:text-white border border-transparent">Learn</a>
+                    <a href="#report" class="px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-200 text-slate-300 hover:bg-slate-800 hover:text-white border border-transparent">Report</a>
+                </div>
+
+                <!-- Live status info and theme toggle button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button id="theme-swap-btn" class="p-2 bg-slate-800/60 hover:bg-slate-800 border border-slate-700/50 text-emerald-400 hover:text-white rounded-xl transition-all cursor-pointer flex items-center justify-center shadow-lg" title="Swap Black/White theme">
+                        <i data-lucide="sun" class="h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation Toggler & Theme Swap -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button id="theme-swap-mobile-btn" class="p-2 rounded-lg text-slate-450 hover:text-white bg-slate-900 border border-slate-800 transition-all cursor-pointer flex items-center justify-center" title="Swap Black/White theme">
+                        <i data-lucide="sun" class="h-4.5 w-4.5"></i>
+                    </button>
+                    <button id="mobile-menu-toggle" class="inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none border border-transparent hover:border-slate-700 transition-all">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 shadow-2xl transition-all">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-mono">
+                <a href="#home" class="block w-full text-left px-4 py-3 rounded-md text-base font-semibold bg-emerald-950/80 border-l-4 border-emerald-500 text-emerald-300">Home</a>
+                <a href="#tools" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-850 hover:text-white">Tools</a>
+                <a href="#learn" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-850 hover:text-white">Learn</a>
+                <a href="#report" class="block w-full text-left px-4 py-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-850 hover:text-white">Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- ==================== VIEW 1: HOME ==================== -->
+        <!-- Urdu Comment: Main landing panel showing modules catalog and bulletins -->
+        <div id="view-home" class="space-y-16 animate-fade-in">
+            <!-- Hero banner overlay -->
+            <div class="relative rounded-3xl border border-slate-800/80 bg-slate-900 overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-luminosity bg-no-repeat w-full h-full"
+                    style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200')">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+                
+                <div class="absolute top-0 right-0 w-24 h-24 sm:w-36 sm:h-36 bg-emerald-500/5 hover:bg-emerald-500/10 transition-colors border-b border-l border-emerald-500/15 rounded-bl-[100px] flex items-start justify-end p-4 sm:p-6 group select-none">
+                    <i data-lucide="globe" class="h-6 w-6 sm:h-8 sm:w-8 text-emerald-500/30 group-hover:scale-110 duration-1000 group-hover:text-emerald-500/60 transition-all"></i>
+                </div>
+
+                <div class="relative z-10 p-6 sm:p-10 md:p-16 max-w-4xl space-y-6 sm:space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-xs font-mono font-semibold text-emerald-400">
+                        <i data-lucide="shield-check" class="h-4 w-4 text-emerald-400 animate-pulse"></i>
+                        <span>Cybersecurity Resources & Awareness</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-3xl font-extrabold text-white tracking-tight leading-none uppercase font-sans">
+                        Safe<span class="text-emerald-400">PK</span>Digital Security Center
+                    </h1>
+
+                    <p class="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl">
+                       A cybersecurity awareness platform providing security tools, educational resources, and reporting guidance.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2 font-mono text-xs">
+                        <a href="#tools" class="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_20px_rgba(16,185,129,0.25)]">
+                            <span>Analyze Password Integrity</span>
+                            <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                        </a>
+                        <a href="#learn" class="px-6 py-3.5 bg-slate-950 hover:bg-slate-850 hover:text-white text-slate-300 rounded-xl border border-slate-800 transition-all cursor-pointer flex items-center justify-center">
+                            <span>Access Cybersecurity Guidelines</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program defensive modules cards grid -->
+            <div class="space-y-6">
+                <div class="space-y-1">
+                    <h2 class="text-lg md:text-xl font-bold text-white uppercase font-mono tracking-wider">
+                        Our Safety Tools
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Sandbox Module 1: Strengths Evaluator -->
+                    <a href="#tools?tool=checker" class="bg-slate-900 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/20 hover:scale-[1.01] hover:bg-slate-900/60 transition-all duration-300 group">
+                        <div class="space-y-3">
+                            <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg w-fit text-emerald-400">
+                                <i data-lucide="lock" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white tracking-wide font-sans group-hover:text-emerald-400 transition-colors">
+                                Password Checker
+                            </h3>
+                            <p class="text-xs text-slate-400 leading-normal">
+                                Analyze password strength and security risks.
+                            </p>
+                        </div>
+                        <div class="text-xs text-emerald-400 font-mono font-bold flex items-center gap-1 mt-4">
+                            <span>Open Tool</span>
+                            <i data-lucide="chevron-right" class="h-3.5 w-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Sandbox Module 2: Key Generator -->
+                    <a href="#tools?tool=generator" class="bg-slate-900 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/20 hover:scale-[1.01] hover:bg-slate-900/60 transition-all duration-300 group">
+                        <div class="space-y-3">
+                            <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg w-fit text-emerald-400">
+                                <i data-lucide="key" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white tracking-wide font-sans group-hover:text-emerald-400 transition-colors">
+                                Password Generator
+                            </h3>
+                            <p class="text-xs text-slate-400 leading-normal">
+                                Generate strong and unique passwords.
+                            </p>
+                        </div>
+                        <div class="text-xs text-emerald-400 font-mono font-bold flex items-center gap-1 mt-4">
+                            <span>Open Tool</span>
+                            <i data-lucide="chevron-right" class="h-3.5 w-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Sandbox Module 3: Security checklist -->
+                    <a href="#tools?tool=checklist" class="bg-slate-900 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/20 hover:scale-[1.01] hover:bg-slate-900/60 transition-all duration-300 group">
+                        <div class="space-y-3">
+                            <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg w-fit text-emerald-400">
+                                <i data-lucide="shield-check" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white tracking-wide font-sans group-hover:text-emerald-400 transition-colors">
+                                Phone Safety Check
+                            </h3>
+                            <p class="text-xs text-slate-400 leading-normal">
+                                Review device security settings.
+                            </p>
+                        </div>
+                        <div class="text-xs text-emerald-400 font-mono font-bold flex items-center gap-1 mt-4">
+                            <span>Open Tool</span>
+                            <i data-lucide="chevron-right" class="h-3.5 w-3.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Sandbox Module 4: Quiz -->
+                    <a href="#tools?tool=quiz" class="bg-slate-900 border border-slate-800/80 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/20 hover:scale-[1.01] hover:bg-slate-900/60 transition-all duration-300 group">
+                        <div class="space-y-3">
+                            <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg w-fit text-emerald-400">
+                                <i data-lucide="help-circle" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white tracking-wide font-sans group-hover:text-emerald-400 transition-colors">
+                                Safety Checklist
+                            </h3>
+                            <p class="text-xs text-slate-400 leading-normal">
+                                Track essential cybersecurity practices.
+                            </p>
+                        </div>
+                        <div class="text-xs text-emerald-400 font-mono font-bold flex items-center gap-1 mt-4">
+                            <span>Open Tool</span>
+                            <i data-lucide="chevron-right" class="h-3.5 w-3.5"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- OTP Alert -->
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-rose-950/20 border border-rose-500/20 text-rose-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            CRITICAL
+        </div>
+        <h4 class="text-sm font-bold text-white">Never Share OTP Codes</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Your OTP and login codes are confidential. Never share them — no legitimate bank, service provider, or official representative will request them.
+        </p>
+    </div>
+
+
+    <!-- Payment Fraud -->
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-amber-950/20 border border-amber-500/20 text-amber-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            WARNING
+        </div>
+        <h4 class="text-sm font-bold text-white">Verify Before Sending Money</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Be cautious of unexpected EasyPaisa or JazzCash requests from unknown numbers. Always verify identity before making payments.
+        </p>
+    </div>
+
+
+    <!-- Phishing Links -->
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-emerald-950/20 border border-emerald-500/20 text-emerald-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            ALERT
+        </div>
+        <h4 class="text-sm font-bold text-white">Avoid Suspicious Links</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Avoid unknown links shared through WhatsApp, Facebook, or SMS claiming prizes, free packages, or rewards.
+        </p>
+    </div>
+
+
+    <!-- Fake Apps -->
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-purple-950/20 border border-purple-500/20 text-purple-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            SECURITY
+        </div>
+        <h4 class="text-sm font-bold text-white">Avoid Fake Applications</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Install apps only from trusted sources and avoid modified APK files that may contain security risks.
+        </p>
+    </div>
+
+
+    <!-- Account Security -->
+    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-blue-950/20 border border-blue-500/20 text-blue-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            PROTECT
+        </div>
+        <h4 class="text-sm font-bold text-white">Secure Your Accounts</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Use strong passwords, enable security settings, and review account activity regularly.
+        </p>
+    </div>
+
+
+    <!-- Public WiFi -->
+    <div class="bg-cyan-950/20 border border-slate-800 p-6 rounded-2xl space-y-4 hover:border-slate-700/60 transition-colors">
+        <div class="p-2 bg-cyan-950/20 border border-cyan-500/20 text-cyan-400 rounded-lg w-fit font-mono text-xs font-bold uppercase">
+            AWARENESS
+        </div>
+        <h4 class="text-sm font-bold text-white">Use Public WiFi Carefully</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+            Avoid sensitive transactions on unknown public networks and verify network security before connecting.
+        </p>
+    </div>
+
+</div>
+
+            <!-- Standardized Prominent FIA Helpline Banner (In every section) -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+        <!-- ==================== VIEW 2: ABOUT ==================== -->
+        <!-- Urdu Comment: About details showing our national security objective -->
+        <div id="view-about" class="hidden space-y-12 animate-fade-in">
+            <div class="space-y-1.5 border-b border-slate-800 pb-5">
+                <h2 class="text-2xl font-bold tracking-tight text-white font-sans">
+                    About SafePK Portal
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
+                    <div class="p-2.5 bg-emerald-955/30 bg-emerald-950/40 border border-emerald-500/20 rounded-xl text-emerald-400 w-fit">
+                        <i data-lucide="eye" class="h-5 w-5"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white">Our Vision</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                       To empower every Pakistani internet user with cybersecurity awareness, helping them protect digital accounts, mobile wallets, and personal information from online threats.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
+                    <div class="p-2.5 bg-emerald-950/40 border border-emerald-500/20 rounded-xl text-emerald-400 w-fit">
+                        <i data-lucide="compass" class="h-5 w-5"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white">What We Check</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        To help users identify and avoid common cyber scams including fake prize calls, OTP fraud, fake WhatsApp verification attempts, phishing links, and account takeover risks before damage happens.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
+                    <div class="p-2.5 bg-emerald-950/40 border border-emerald-500/20 rounded-xl text-emerald-400 w-fit">
+                        <i data-lucide="shield" class="h-5 w-5"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white">Your Privacy</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        All security checks are designed to work privately inside your browser. SafePK does not send passwords or security test data to external servers. Your information stays on your own device during normal usage.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Standardized Prominent FIA Helpline Banner -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+        <!-- ==================== VIEW 3: TOOLS ==================== -->
+        <!-- Urdu Comment: Interactive Cyber tools dashboard (checker, generator, checklist, quiz) -->
+        <div id="view-tools" class="hidden space-y-8 animate-fade-in">
+            <div class="space-y-1.5 border-b border-slate-800 pb-5">
+                <h2 class="text-2xl font-bold tracking-tight text-white font-sans">
+                    Threat Mitigation Utilities
+                </h2>
+            </div>
+
+            <!-- Navigation sub tabs bar -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-2 select-none font-mono text-[10px]">
+                <button id="tab-checker" class="px-3.5 py-2.5 bg-emerald-950/55 border border-emerald-500/35 text-emerald-300 rounded-xl transition-all">PASSWORD CHECKER</button>
+                <button id="tab-generator" class="px-3.5 py-2.5 bg-transparent border border-transparent rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-850 transition-all">PASSWORD GENERATOR</button>
+                <button id="tab-checklist" class="px-3.5 py-2.5 bg-transparent border border-transparent rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-850 transition-all">SAFETY CHECKLIST</button>
+                <button id="tab-quiz" class="px-3.5 py-2.5 bg-transparent border border-transparent rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-850 transition-all">SAFETY QUIZ</button>
+            </div>
+
+            <!-- Tab Content Wrapper -->
+            <div id="tools-inner-views" class="space-y-6">
+                
+                <!-- SUB-TOOL 1: PASSWORD CHECKER -->
+                <div id="container-checker" class="tool-view space-y-5">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <!-- Left block -->
+                        <div class="lg:col-span-12 xl:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 bg-emerald-950/50 border border-emerald-500/20 rounded-xl">
+                                    <i data-lucide="shield-check" class="h-5 w-5 text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white">Password Safety Checker</h3>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 font-mono text-xs">
+                                <label class="font-bold text-slate-400 uppercase">Type your password here to test:</label>
+                                <div class="relative">
+                                    <input type="password" id="checker-password-input" placeholder="Type check words here... (all private)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-slate-200 font-sans tracking-wide focus:outline-none focus:border-emerald-500/50 transition-all">
+                                    <button id="checker-reveal-btn" class="absolute right-3.5 top-1/2 -translate-y-1/2 p-1.5 text-slate-500 hover:text-slate-350 transition-colors select-none" title="Reveal Characters">
+                                        <i data-lucide="eye" class="h-4.5 w-4.5"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Visual Criteria checklist checklist -->
+                            <div class="space-y-2 mt-4 text-xs font-mono">
+                                <span class="text-slate-400 uppercase font-bold">Essential Password Security Criteria:</span>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                                    <div id="criteria-len" class="flex items-center gap-2 p-2 rounded-lg bg-slate-950/40 border border-transparent text-slate-500 transition-all duration-200">
+                                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                                        <span>Safe Length (12+ letters)</span>
+                                    </div>
+                                    <div id="criteria-upper" class="flex items-center gap-2 p-2 rounded-lg bg-slate-950/40 border border-transparent text-slate-500 transition-all duration-200">
+                                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                                        <span>Bari ABC (Capital Letter)</span>
+                                    </div>
+                                    <div id="criteria-lower" class="flex items-center gap-2 p-2 rounded-lg bg-slate-950/40 border border-transparent text-slate-500 transition-all duration-200">
+                                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                                        <span>Choti ABC (Small Letter)</span>
+                                    </div>
+                                    <div id="criteria-digit" class="flex items-center gap-2 p-2 rounded-lg bg-slate-950/40 border border-transparent text-slate-500 transition-all duration-200">
+                                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                                        <span>Gintee (Number 0-9)</span>
+                                    </div>
+                                    <div id="criteria-special" class="flex items-center gap-2 p-2 rounded-lg bg-slate-950/40 border border-transparent text-slate-500 transition-all duration-200 col-span-1 sm:col-span-2">
+                                        <i data-lucide="clock" class="h-3.5 w-3.5"></i>
+                                        <span>Special Mark (like @, #, $, %)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Score visual bars -->
+                            <div class="space-y-2 select-none">
+                                <div class="flex justify-between items-center text-xs font-mono">
+                                    <span class="text-slate-500">PASSWORD SAFETY STRENGTH:</span>
+                                    <span id="checker-score-label" class="text-rose-500 font-bold uppercase">NOT CHECKED YET</span>
+                                </div>
+                                <div class="grid grid-cols-5 gap-1.5 h-2">
+                                    <div id="score-bar-1" class="rounded-sm bg-slate-950 border border-slate-850 transition-all duration-300"></div>
+                                    <div id="score-bar-2" class="rounded-sm bg-slate-950 border border-slate-850 transition-all duration-300"></div>
+                                    <div id="score-bar-3" class="rounded-sm bg-slate-950 border border-slate-850 transition-all duration-300"></div>
+                                    <div id="score-bar-4" class="rounded-sm bg-slate-950 border border-slate-850 transition-all duration-300"></div>
+                                    <div id="score-bar-5" class="rounded-sm bg-slate-950 border border-slate-850 transition-all duration-300"></div>
+                                </div>
+                            </div>
+
+                            <!-- Entropy statistics boxes -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-1">
+                                    <span class="text-[10px] font-mono text-slate-500">PASSWORD SAFETY SCORE:</span>
+                                    <div id="checker-entropy-val" class="text-lg font-mono font-bold text-white">0.00 Bits</div>
+                                </div>
+                                <div class="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-1">
+                                    <span class="text-[10px] font-mono text-slate-500">HACKING RISK LEVEL:</span>
+                                    <div id="checker-entropy-desc" class="text-xs text-slate-400 font-sans leading-relaxed">Enter characters to check.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right block showing leak warnings -->
+                        <div class="lg:col-span-12 xl:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-5">
+                            <h4 class="text-sm font-bold uppercase font-mono tracking-wider text-slate-400 border-b border-slate-850 pb-3">
+                                Scam & Hacking Risks
+                            </h4>
+                            <div id="checker-leak-alerts" class="p-4 bg-emerald-950/20 border border-emerald-500/10 text-emerald-400 rounded-xl text-xs space-y-2">
+                                <div class="flex items-center gap-1.5 font-mono font-bold uppercase">
+                                    <i data-lucide="check-circle" class="h-4.5 w-4.5"></i>
+                                    <span>No Risks Found Yet</span>
+                                </div>
+                                <p class="text-slate-400 leading-relaxed font-sans mt-1">
+                                    Type above. We will warn you if your password has risky words like "pakistan", "12345", or your name.
+                                </p>
+                            </div>
+                            <!-- Failures list -->
+                            <div id="checker-leaks-list" class="space-y-3 max-h-[220px] overflow-y-auto pr-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-TOOL 2: KEY GENERATOR -->
+                <div id="container-generator" class="tool-view hidden space-y-5">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <!-- Left panel -->
+                        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 bg-emerald-950/50 border border-emerald-500/20 rounded-xl">
+                                    <i data-lucide="key" class="h-5 w-5 text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white">Password Generator</h3>
+                                </div>
+                            </div>
+
+                            <!-- Generated Key output container -->
+                            <div class="p-4.5 p-4 bg-slate-950 rounded-xl border border-slate-850 flex items-center justify-between gap-4">
+                                <div class="overflow-x-auto truncate font-mono text-emerald-400 select-all pr-2" id="generator-output-val">
+                                    * * * * * * * * * * * * * * * *
+                                </div>
+                                <button id="generator-btn-copy" class="p-2 bg-slate-900 border border-slate-800 hover:border-emerald-500/30 text-slate-400 hover:text-emerald-400 rounded-lg transition-colors scale-100 active:scale-95" title="Copy Secret key text">
+                                    <i data-lucide="copy" class="h-4.5 w-4.5"></i>
+                                </button>
+                            </div>
+
+                            <!-- Length scale -->
+                            <div class="space-y-2 font-mono text-xs">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-slate-550 text-slate-400 font-bold uppercase">PASSWORD LENGTH:</span>
+                                    <span id="generator-length-disp" class="text-emerald-400 font-extrabold text-sm">16</span>
+                                </div>
+                                <input type="range" id="generator-range-input" min="8" max="64" value="16" class="w-full h-1.5 bg-slate-950 rounded-full appearance-none cursor-pointer accent-emerald-500 border border-slate-850">
+                            </div>
+
+                            <button id="generator-btn-submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)]">
+                                <span>Generate New Password</span>
+                                <i data-lucide="refresh-cw" class="h-4 w-4"></i>
+                            </button>
+                        </div>
+
+                        <!-- Right panel options -->
+                        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-5">
+                            <h4 class="text-sm font-bold uppercase font-mono tracking-wider text-slate-400 border-b border-slate-850 pb-3">
+                                Include These Letters & Symbols
+                            </h4>
+                            <div class="space-y-3 font-mono text-xs">
+                                <label class="flex items-center gap-3 cursor-pointer select-none">
+                                    <input type="checkbox" id="gen-opt-uppercase" checked class="w-4 h-4 rounded border-slate-800 text-emerald-500 bg-slate-950 focus:ring-emerald-500/50">
+                                    <span class="text-slate-300">Big Capitals (A-Z)</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer select-none">
+                                    <input type="checkbox" id="gen-opt-lowercase" checked class="w-4 h-4 rounded border-slate-800 text-emerald-500 bg-slate-950 focus:ring-emerald-500/50">
+                                    <span class="text-slate-300">Small Letters (a-z)</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer select-none">
+                                    <input type="checkbox" id="gen-opt-numbers" checked class="w-4 h-4 rounded border-slate-800 text-emerald-500 bg-slate-950 focus:ring-emerald-500/50">
+                                    <span class="text-slate-300">Numbers (0-9)</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer select-none">
+                                    <input type="checkbox" id="gen-opt-symbols" checked class="w-4 h-4 rounded border-slate-800 text-emerald-500 bg-slate-950 focus:ring-emerald-500/50">
+                                    <span class="text-slate-300">Special Marks (like @, #, $, %)</span>
+                                </label>
+                            </div>
+
+                            <div class="p-4 bg-slate-950 rounded-xl border border-slate-850 space-y-2">
+                                <label class="flex items-start gap-3 cursor-pointer select-none">
+                                    <input type="checkbox" id="gen-opt-exclude" class="w-4 h-4 rounded border-slate-800 text-emerald-500 bg-slate-950 focus:ring-emerald-500/50 mt-0.5">
+                                    <div>
+                                        <span class="text-slate-300 font-semibold block">Avoid Confusing Letters</span>
+                                        <span class="text-slate-500 text-[10px] font-normal leading-normal block mt-0.5">
+                                            Removes characters like big I, small l, number 1, big O, and number 0, because they look almost the same.
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUB-TOOL 3: AUDIT CHECKLIST -->
+                <div id="container-checklist" class="tool-view hidden space-y-5">
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2.5 bg-emerald-950/50 border border-emerald-500/20 rounded-xl">
+                                <i data-lucide="shield-check" class="h-5 w-5 text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Phone Safety Check</h3>
+                            </div>
+                        </div>
+
+                        <!-- Progress indicator bar header -->
+                        <div class="p-4 bg-slate-950 border border-slate-850 rounded-2xl space-y-3.5 mb-6 animate-pulse">
+                            <div class="flex justify-between items-center text-xs font-mono">
+                                <span class="text-slate-500 flex items-center gap-1.5 uppercase font-bold">
+                                    <i data-lucide="award" class="text-emerald-400 h-4.5 w-4.5"></i> Safety Score Level:
+                                </span>
+                                <span id="checklist-progress-pct" class="text-emerald-400 font-bold">0% Secure</span>
+                            </div>
+                            <div class="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-850">
+                                <div id="checklist-progress-bar" class="h-full bg-emerald-500 w-0 transition-all duration-300"></div>
+                            </div>
+                            <p id="checklist-progress-adv" class="text-[10px] text-slate-500 font-mono leading-relaxed text-center">
+                                Select checked configurations to evaluate defense levels.
+                            </p>
+                        </div>
+
+                        <!-- Category Filters switches -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-2 select-none font-mono text-[10px]">
+                            <button id="chk-filter-all" class="chk-filter-btn px-3 py-1.5 border rounded bg-emerald-950/40 border-emerald-500/30 text-emerald-300 cursor-pointer">ALL DEVICES</button>
+                            <button id="chk-filter-accounts" class="chk-filter-btn px-3 py-1.5 border border-transparent rounded text-slate-400 hover:text-slate-200 hover:bg-slate-850 cursor-pointer">ACCOUNTS</button>
+                            <button id="chk-filter-devices" class="chk-filter-btn px-3 py-1.5 border border-transparent rounded text-slate-400 hover:text-slate-200 hover:bg-slate-850 cursor-pointer">DEVICES</button>
+                            <button id="chk-filter-network" class="chk-filter-btn px-3 py-1.5 border border-transparent rounded text-slate-400 hover:text-slate-200 hover:bg-slate-850 cursor-pointer">NETWORK</button>
+                            <button id="chk-filter-personal" class="chk-filter-btn px-3 py-1.5 border border-transparent rounded text-slate-400 hover:text-slate-200 hover:bg-slate-850 cursor-pointer">PERSONAL</button>
+                        </div>
+
+                        <!-- Checkbox list items wrapper -->
+                        <div id="checklist-items-list" class="space-y-4 pt-4"></div>
+                    </div>
+                </div>
+
+                <!-- SUB-TOOL 4: SECURITY QUIZ -->
+                <div id="container-quiz" class="tool-view hidden space-y-5">
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2.5 bg-emerald-950/50 border border-emerald-500/20 rounded-xl">
+                                <i data-lucide="help-circle" class="h-5 w-5 text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Cyber Safety Assessment</h3>
+                            </div>
+                        </div>
+
+                        <!-- Main Screen Quiz Wrapper -->
+                        <div id="quiz-screen-start" class="space-y-6 text-center py-6">
+                            <p class="text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+                                Evaluate your defensive responses against regional attack vectors including fraudulent communication, authentication spoofing, credential theft, and account replication.
+                            </p>
+                            <button id="quiz-btn-start" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold rounded-xl transition-all shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)] cursor-pointer">
+                                Begin Assessment
+                            </button>
+                        </div>
+
+                        <!-- Question Active Sandbox -->
+                        <div id="quiz-screen-active" class="hidden space-y-6">
+                            <div class="flex justify-between items-center text-xs font-mono border-b border-slate-850 pb-3">
+                                <span class="text-slate-500 font-bold uppercase">SCENARIO SITUATION</span>
+                                <span id="quiz-counter" class="text-emerald-400 font-bold">Question 1 of 10</span>
+                            </div>
+
+                            <p id="quiz-question-txt" class="text-sm md:text-base font-bold text-white leading-relaxed">
+                            </p>
+
+                            <!-- Options Switch -->
+                            <div id="quiz-options-wrapper" class="grid grid-cols-1 gap-3"></div>
+
+                            <!-- Alert Box for explanations -->
+                            <div id="quiz-explanation-box" class="hidden p-4 rounded-xl text-xs space-y-2">
+                                <div class="flex items-center gap-2 font-mono font-bold uppercase">
+                                    <span id="quiz-alert-title">Correct Verification!</span>
+                                </div>
+                                <p id="quiz-explanation-txt" class="leading-relaxed text-slate-300 font-sans"></p>
+                            </div>
+
+                            <!-- Next button -->
+                            <div class="flex justify-end pt-2">
+                                <button id="quiz-btn-next" disabled class="px-5 py-2.5 bg-slate-950 border border-slate-800 text-slate-400 rounded-xl font-mono text-xs transition-all pointer-events-none cursor-pointer">
+                                    Proceed to Next Scenario
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- End Screen results -->
+                        <div id="quiz-screen-end" class="hidden space-y-8 py-4">
+                            <div class="text-center space-y-2">
+                                <h4 class="text-xl font-bold text-white">Evaluation Complete!</h4>
+                                <p class="text-xs font-mono text-slate-500">YOUR DIGITAL SAFETY SCORE CARD</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto text-center font-mono">
+                                <div class="bg-slate-950 p-4 border rounded-2xl flex flex-col justify-center">
+                                    <span class="text-[10px] text-slate-500">QUESTIONS PASSED</span>
+                                    <span id="quiz-result-score" class="text-2xl font-bold text-emerald-400 block mt-1">0 / 10</span>
+                                </div>
+                                <div class="bg-slate-950 p-4 border border-slate-850 rounded-2xl flex flex-col justify-center">
+                                    <span class="text-[10px] text-slate-500">YOUR SAFETY LEVEL</span>
+                                    <span id="quiz-result-level" class="text-lg font-bold block mt-1">Calculating...</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-950 border border-slate-850 p-5 rounded-2xl max-w-xl mx-auto space-y-3 font-sans text-xs">
+                                <h5 class="font-mono text-[10px] uppercase font-bold text-emerald-400">Our Custom Advice:</h5>
+                                <p id="quiz-result-advice" class="text-slate-400 leading-relaxed"></p>
+                            </div>
+
+                            <div class="flex justify-center pt-2">
+                                <button id="quiz-btn-restart" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-mono text-xs font-bold transition-all cursor-pointer">
+                                    Play Quiz Again
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standardized Prominent FIA Helpline Banner -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+        <!-- ==================== VIEW 4: LEARN ==================== -->
+        <!-- Urdu Comment: Cyber awareness and training hub displaying detailed Pakistani threat cards -->
+        <div id="view-learn" class="hidden space-y-8 animate-fade-in">
+            <div class="space-y-1.5 border-b border-slate-800 pb-5">
+                <h2 class="text-2xl font-bold tracking-tight text-white font-sans">
+                    Learn Digital Safety
+                </h2>
+            </div>
+
+            <!-- Main Interactive Tab Box -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-705 transition-all duration-300">
+                <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
+                    
+                    <!-- Left Side Sidebar Menu columns -->
+                    <div class="lg:col-span-4 bg-slate-950/60 border-r border-slate-850 p-4 md:p-6 space-y-2">
+                        <h3 class="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest px-3 mb-4 select-none">
+                            SAFETY TOPICS
+                        </h3>
+                        <!-- Left-hand navigation list toggled dynamically -->
+                        <div id="topic-sidebar-buttons" class="flex flex-row lg:flex-col gap-1.5 overflow-x-auto lg:overflow-visible pb-3 lg:pb-0 select-none no-scrollbar"></div>
+                    </div>
+
+                    <!-- Right Side Expanded Topic Container Details Panel -->
+                    <div class="lg:col-span-8 p-6 md:p-8 space-y-6 bg-gradient-to-br from-slate-900 to-slate-950">
+                        <!-- Header panel details -->
+                        <div class="flex items-center gap-4 border-b border-slate-805 border-slate-800 pb-5">
+                            <div class="p-3 bg-emerald-950/40 border border-emerald-500/20 rounded-xl text-emerald-400">
+                                <i id="active-icon" data-lucide="mail" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 id="active-title" class="text-lg md:text-xl font-bold tracking-tight text-white font-sans">Topic Title</h4>
+                                <p id="active-short" class="text-xs font-mono text-slate-400"></p>
+                            </div>
+                        </div>
+
+                        <!-- Full description statement -->
+                        <p id="active-content" class="text-xs md:text-sm text-slate-300 leading-relaxed bg-slate-950/40 p-4 border border-slate-850 rounded-xl"></p>
+
+                        <!-- Double split grids for Attack vectors and Safeguards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                            <!-- Col 1: Threats list -->
+                            <div class="space-y-3">
+                                <h5 class="text-[11px] font-bold uppercase font-mono tracking-widest text-slate-500 flex items-center gap-2 select-none">
+                                    <i data-lucide="alert-triangle" class="h-4 w-4 text-rose-500/80"></i>
+                                    <span>How the Scam Works:</span>
+                                </h5>
+                                <div id="active-vulnerabilities" class="space-y-2.5"></div>
+                            </div>
+
+                            <!-- Col 2: Remedies list -->
+                            <div class="space-y-3">
+                                <h5 class="text-[11px] font-bold uppercase font-mono tracking-widest text-slate-500 flex items-center gap-2 select-none">
+                                    <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500/80"></i>
+                                    <span>How to Stay Safe:</span>
+                                </h5>
+                                <div id="active-strategies" class="space-y-2.5"></div>
+                            </div>
+                        </div>
+
+                        <!-- Bullet lists for Quick check tips -->
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-3">
+                            <h5 class="text-[11px] font-bold uppercase font-mono tracking-widest text-slate-400 flex items-center gap-1.5 select-none">
+                                <i data-lucide="sparkles" class="h-3.5 w-3.5 text-emerald-400 animate-pulse"></i>
+                                <span>Easy Safety Tips:</span>
+                            </h5>
+                            <ul id="active-tips" class="space-y-2 text-xs text-slate-400"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standardized Prominent FIA Helpline Banner -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+        <!-- ==================== VIEW 5: REPORT ==================== -->
+        <!-- Urdu Comment: Email complaint compiler block with live preview and local state tracking -->
+        <div id="view-report" class="hidden space-y-8 animate-fade-in">
+            <div class="space-y-1.5 border-b border-slate-800 pb-5">
+                <h2 class="text-2xl font-bold tracking-tight text-white font-sans">
+                    Write a Scam Report & Email
+                </h2>
+            </div>
+
+            <!-- Double panel side layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                
+                <!-- Left: Interactive submit form & draft preview -->
+                <div class="lg:col-span-3 space-y-6">
+                    <!-- Column 1.1: Incident Logging Form -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2.5 bg-emerald-950/50 border border-emerald-500/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="edit-3" class="h-5 w-5 text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">1. Enter Scam Details</h3>
+                            </div>
+                        </div>
+
+                        <!-- Input Fields Form -->
+                        <form id="threat-report-form" class="space-y-4">
+                            <div class="space-y-1.5 font-mono text-xs">
+                                <label class="font-bold text-slate-400 uppercase">Scam Subject / Title:</label>
+                                <input type="text" id="report-title" required placeholder="e.g., Cloned Profile / Demanded money on WhatsApp" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1.5 font-mono text-xs">
+                                    <label class="font-bold text-slate-400 uppercase">Scam Category / Type:</label>
+                                    <select id="report-type" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors cursor-pointer">
+                                        <option value="Phishing Attempt">Fake Links (SMS, Fake sites)</option>
+                                        <option value="Monetary/Wallet Scam">Money Scams (EasyPaisa/JazzCash)</option>
+                                        <option value="Account Takeover">Account Hacking (WhatsApp, Socials)</option>
+                                        <option value="Impersonation Attack">Fake Profiles / Impersonation</option>
+                                        <option value="SIM Swapping OTP Intercept">SIM Card Lock / OTP Scam</option>
+                                        <option value="E-Commerce Fraud">Fake Online Stores</option>
+                                        <option value="Privacy Violation">Spy apps / Phone hacking</option>
+                                    </select>
+                                </div>
+
+                                <div class="space-y-1.5 text-xs font-mono">
+                                    <label class="font-bold text-slate-400 uppercase">Date of Scam:</label>
+                                    <input type="date" id="report-date" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors cursor-pointer">
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5 font-mono text-xs">
+                                <label class="font-bold text-slate-400 uppercase">Write What Happened:</label>
+                                <textarea id="report-description" required rows="4" placeholder="Describe chronological events: Identify the initiator, communication channel utilized (phone, web hyperlink), requested variables (funds, verification codes), and current impact." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 font-sans focus:outline-none focus:border-emerald-500/50 transition-colors resize-y leading-relaxed"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)]">
+                                <span>Save on My Phone / Computer</span>
+                                <i data-lucide="plus-circle" class="h-4 w-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Column 1.2: Dynamic Email Complaint Generator Block -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2.5 bg-rose-500/10 border border-rose-500/15 rounded-xl text-rose-400 flex items-center justify-center">
+                                <i data-lucide="mail-question" class="h-5 w-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-semibold text-white">2. Your Complete Email Draft</h3>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <!-- Quick advisory guidelines -->
+                            <div class="p-3.5 bg-slate-950 border border-slate-850 rounded-lg text-xs leading-relaxed text-slate-400 font-sans">
+                                <span class="font-bold text-emerald-400 block mb-1">Where to Email this Complaint:</span>
+                                📨 Send complaint to: <span class="font-mono text-white select-all">helpdesk@nr3c.gov.pk</span> (Cyber Crimes Unit) or <span class="font-mono text-white select-all">reports@pkcert.gov.pk</span> (Malware & System Security).
+                            </div>
+
+                            <!-- Formatted Display Area -->
+                            <div class="relative group">
+                                <pre id="complaint-email-output" class="bg-slate-950 p-4 rounded-xl border border-slate-850 font-mono text-[11px] text-slate-300 leading-relaxed overflow-x-auto whitespace-pre-wrap max-h-[360px] overflow-y-auto no-scrollbar"></pre>
+                                
+                                <div class="absolute top-2.5 right-2.5 flex items-center gap-2">
+                                    <button id="export-pdf-btn" class="p-2 bg-slate-900 hover:bg-slate-850 text-emerald-400 hover:text-white border border-slate-800 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer shadow-md text-[10px]" title="Export this draft complaint story as a professionally formatted PDF document">
+                                        <i data-lucide="file-down" class="h-3.5 w-3.5"></i>
+                                        <span>Export PDF</span>
+                                    </button>
+                                    <button id="copy-draft-btn" class="p-2 bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-white border border-slate-800 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer shadow-md text-[10px]" title="Copy formal complaint description of the case story">
+                                        <i data-lucide="copy" id="copy-icon" class="h-3.5 w-3.5"></i>
+                                        <span id="copy-btn-text">Copy Draft</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Reported list view -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+                        <div class="flex items-center justify-between border-b border-slate-850 pb-4 mb-5">
+                            <div>
+                                <h4 class="text-sm font-bold uppercase font-mono tracking-wider text-slate-400">My Saved Reports</h4>
+                            </div>
+                            <span id="reports-count-badge" class="px-2.5 py-0.5 bg-slate-950 border border-slate-800 text-xs font-mono font-bold text-emerald-400 rounded-full">0 saved</span>
+                        </div>
+
+                        <div id="reports-empty-state" class="text-center py-10 space-y-3">
+                            <i data-lucide="file-text" class="h-10 w-10 text-slate-600 mx-auto"></i>
+                            <p class="text-xs text-slate-500 font-mono max-w-xs mx-auto">
+                                No reports saved yet. Fill and submit the form on the left to save your first report here.
+                            </p>
+                        </div>
+
+                        <!-- Incident card renders dynamically -->
+                        <div id="reports-render-list" class="space-y-4 max-h-[500px] overflow-y-auto pr-1 no-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standardized Prominent FIA Helpline Banner -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+        <!-- ==================== VIEW 6: CONTACT ==================== -->
+        <!-- Urdu Comment: User coordinator inquiry submission panel -->
+        <div id="view-contact" class="hidden space-y-8 animate-fade-in">
+            <div class="space-y-1.5 border-b border-slate-800 pb-5">
+                <h2 class="text-2xl font-bold tracking-tight text-white font-sans">
+                    Secure Support Coordinator
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                
+                <!-- Left contact form design -->
+                <div class="lg:col-span-3 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+                    <form id="secure-contact-form" class="space-y-4">
+                        <div id="contact-success-panel" class="hidden p-4 bg-emerald-950/30 border border-emerald-500/30 text-emerald-400 text-xs font-mono rounded-xl space-y-2">
+                            <div class="flex items-center gap-2 font-bold uppercase tracking-wide">
+                                <i data-lucide="check-circle-2" class="h-4 w-4"></i>
+                                <span>Submission Capped!</span>
+                            </div>
+                            <p class="text-slate-350 font-sans leading-relaxed">
+                                Thank you for matching SafePK criteria. Your transmission package has been processed locally on client-side boundaries. No details leaked.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1.5 text-xs font-mono">
+                                <label class="font-bold text-slate-400 uppercase">Your Name / Alias:</label>
+                                <input type="text" id="contact-name" required placeholder="Enter name or pseudonym..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors">
+                            </div>
+
+                            <div class="space-y-1.5 text-xs font-mono">
+                                <label class="font-bold text-slate-400 uppercase">Your Secure Email:</label>
+                                <input type="email" id="contact-email" required placeholder="user@domain.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1.5 text-xs font-mono">
+                            <label class="font-bold text-slate-400 uppercase">Secure Subject Target:</label>
+                            <input type="text" id="contact-subject" required placeholder="e.g., SIM Hijack alert response" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-305 text-slate-350 text-slate-300 focus:outline-none focus:border-emerald-500/50 transition-colors">
+                        </div>
+
+                        <div class="space-y-1.5 text-xs font-mono">
+                            <label class="font-bold text-slate-400 uppercase">Context Details:</label>
+                            <textarea id="contact-message" required rows="4" placeholder="Briefly specify your inquiry coordinates..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-300 font-sans focus:outline-none focus:border-emerald-500/50 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_15px_-3px_rgba(16,185,129,0.3)]">
+                            <span>Send Secure Packet</span>
+                            <i data-lucide="send" class="h-4 w-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right contact stats card -->
+                <div class="lg:col-span-2">
+                    <div class="bg-slate-900 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-5">
+                        <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 border-b border-slate-850 pb-3">
+                            Direct Coordinator Coordinates
+                        </h4>
+                        
+                        <div class="space-y-5 text-xs font-mono leading-relaxed text-slate-400">
+                            <div>
+                                <span class="text-[10px] text-slate-500 font-bold block uppercase tracking-wider">PLATFORM PROTOCOL COORDINATES</span>
+                                <p class="text-slate-200 mt-1">
+                                    Secure Support line is logged on <span class="text-emerald-400 select-all">safepk.proton.me</span>. Address verified keys over mail.
+                                </p>
+                            </div>
+                            
+                            <div class="pt-2">
+                                <span class="text-[10px] text-slate-500 font-bold block uppercase tracking-wider">PROMISE OF DATA INTEGRITY</span>
+                                <p class="text-slate-500 text-[10px] mt-1 leading-normal">
+                                    All input values structured in these templates are parsed local-only inside your safe browser node boundaries, protecting your information assets completely from external leaks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standardized Prominent FIA Helpline Banner -->
+            <div class="fia-banner-element"></div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer Component -->
+    <!-- Urdu Comment: Global status navigation alignment displayed clearly -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 select-none mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-slate-900 pb-8">
+                
+                <!-- Brand metadata -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2.5">
+                        <i data-lucide="shield" class="h-5 w-5 text-emerald-400"></i>
+                        <span class="text-lg font-bold text-white tracking-wide">Safe<span class="text-emerald-400">PK</span></span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Defending digital users across Pakistan with free cybersecurity awareness tools, safety checks, and privacy-focused offline utilities.
+                    </p>
+                </div>
+
+                <!-- Navigation menu shortcuts -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Platform links</h4>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li><a href="#home" class="hover:text-emerald-400 transition-all">Home</a></li>
+                        <li><a href="#about" class="hover:text-emerald-400 transition-all">About</a></li>
+                        <li><a href="#tools" class="hover:text-emerald-400 transition-all">Durable Sandboxes</a></li>
+                        <li><a href="#learn" class="hover:text-emerald-400 transition-all">Awareness Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Local legal policies links -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Compliance</h4>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li><a href="./legal/privacy.html" class="hover:text-emerald-400 transition-colors">Privacy</a></li>
+                        <li><a href="./legal/terms.html" class="hover:text-emerald-400 transition-colors">Terms</a></li>
+                        <li><a href="./legal/disclaimer.html" class="hover:text-emerald-400 transition-colors">Disclaimer</a></li>
+                        <li><a href="./legal/cookies.html" class="hover:text-emerald-400 transition-colors">Cookies</a></li>
+                        <li><a href="./legal/dev.html" class="hover:text-emerald-400 transition-colors">Devloper</a></li>
+                    </ul>
+                </div>
+
+                <!-- National emergency wings contact lines -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Incident Ports</h4>
+                    <div class="text-xs text-slate-500 space-y-2.5 leading-relaxed">
+                        <div>
+                            <p class="font-bold text-slate-300">FIA & NCCIA Helpline</p>
+                            <p>Call 1991 (Toll Free)</p>
+                            <p class="text-[10px] text-emerald-500/80">helpdesk@nr3c.gov.pk</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-300">PKCERT (National CERT)</p>
+                            <p class="text-[10px] text-emerald-500/80">reports@pkcert.gov.pk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Base status and copyright alignment -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-500">
+                <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span>© <span id="current-year">2026</span> SafePK. All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== LOGIC AND DATA MODULES SCRIPTS ==================== -->
+    <script src="./js/app.js"></script>
+    <script src="./js/topics.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/tools/password-checker.js"></script>
+    <script src="./js/tools/password-generator.js"></script>
+    <script src="./js/tools/checklist.js"></script>
+    <script src="./js/tools/quiz.js"></script>
+
+    <script>
+        // Set year in footer dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Standardized FIA, NCCIA and PKCERT cybercrime widget template to insert dynamically inside every view
+        const fiaHelplineTemplate = `
+            <div class="space-y-4">
+                <div class="flex items-center gap-2 font-mono text-[10px] text-slate-500 uppercase font-black tracking-widest">
+                    <i data-lucide="shield-alert" class="h-4 w-4 text-emerald-400"></i>
+                    <span>Pakistan Cyber Incident Response & Investigation Coordination</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Agency 1: FIA & NCCIA -->
+                    <div class="p-5 rounded-xl bg-slate-900 border border-emerald-500/10 hover:border-emerald-500/20 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="p-2 bg-rose-500/10 border border-rose-500/15 text-rose-450 text-rose-405 text-rose-400 rounded-lg">
+                                    <i data-lucide="phone-call" class="h-4.5 w-4.5 animate-pulse"></i>
+                                </span>
+                                <div>
+                                    <div class="flex items-center gap-1.5">
+                                        <h4 class="text-xs font-bold text-white uppercase font-mono">FIA & NCCIA</h4>
+                                        <span class="px-1.5 py-0.5 bg-rose-500/10 text-[8px] text-rose-400 font-mono rounded font-medium">Investigation</span>
+                                    </div>
+                                    <span class="text-[9px] text-slate-500 font-mono block">National Cyber Crime Agency</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-normal font-sans">
+                                Report financial scams, EasyPaisa / JazzCash frauds, identity theft, cyberstalking, and blackmailing to the Federal Investigation Agency (FIA) / National Cyber Crime Investigation Agency (NCCIA).
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-950">
+                            <a href="tel:1991" class="px-2.5 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+                                <i data-lucide="phone" class="h-3 w-3"></i>
+                                <span>Dial 1991</span>
+                            </a>
+                            <a href="mailto:helpdesk@nr3c.gov.pk" class="px-2.5 py-1.5 bg-slate-950 hover:bg-slate-850 text-slate-300 font-mono text-[10px] rounded border border-slate-800 transition-colors flex items-center gap-1">
+                                <i data-lucide="mail" class="h-3 w-3 text-slate-500"></i>
+                                <span>Email NR3C</span>
+                            </a>
+                            <a href="https://complaint.fia.gov.pk/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+                                <i data-lucide="external-link" class="h-3 w-3"></i>
+                                <span>FIA Portal</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Agency 2: PKCERT -->
+                    <div class="p-5 rounded-xl bg-slate-900 border border-emerald-500/10 hover:border-emerald-500/20 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="p-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-lg">
+                                    <i data-lucide="shield-check" class="h-4.5 w-4.5"></i>
+                                </span>
+                                <div>
+                                    <div class="flex items-center gap-1.5">
+                                        <h4 class="text-xs font-bold text-white uppercase font-mono">PKCERT (National CERT)</h4>
+                                        <span class="px-1.5 py-0.5 bg-emerald-500/10 text-[8px] text-emerald-400 font-mono rounded font-medium">Mitigation</span>
+                                    </div>
+                                    <span class="text-[9px] text-slate-500 font-mono block">Pakistan Computer Emergency Response Team</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-normal font-sans">
+                                Coordinator for computer security incidents, threat detection, high-critical vulnerability scanning, and cybersecurity alerts monitoring to defend national computing assets.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-950 mt-auto">
+                            <a href="mailto:reports@pkcert.gov.pk" class="px-2.5 py-1.5 bg-slate-950 hover:bg-slate-850 text-emerald-300 border border-emerald-500/20 font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+                                <i data-lucide="mail" class="h-3 w-3 text-emerald-400"></i>
+                                <span>reports@pkcert.gov.pk</span>
+                            </a>
+                            <a href="https://www.pkcert.gov.pk/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+                                <i data-lucide="external-link" class="h-3 w-3"></i>
+                                <span>PKCERT Portal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Inject FIA Helpline templates in all placeholder views
+        document.querySelectorAll('.fia-banner-element').forEach(el => {
+            el.innerHTML = fiaHelplineTemplate;
+        });
+
+        lucide.createIcons();
+
+        // ==================== TOOLS TAB SWITCHER LOGIC ====================
+        const tabs = {
+            'checker': { btn: document.getElementById('tab-checker'), container: document.getElementById('container-checker') },
+            'generator': { btn: document.getElementById('tab-generator'), container: document.getElementById('container-generator') },
+            'checklist': { btn: document.getElementById('tab-checklist'), container: document.getElementById('container-checklist') },
+            'quiz': { btn: document.getElementById('tab-quiz'), container: document.getElementById('container-quiz') }
+        };
+
+        window.switchTab = function(targetTabId) {
+            Object.keys(tabs).forEach(tabId => {
+                const item = tabs[tabId];
+                if (!item.container || !item.btn) return;
+                if (tabId === targetTabId) {
+                    item.container.classList.remove('hidden');
+                    item.btn.classList.add('bg-emerald-950/55', 'border-emerald-500/35', 'text-emerald-300');
+                    item.btn.classList.remove('bg-transparent', 'border-transparent', 'text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-850');
+                } else {
+                    item.container.classList.add('hidden');
+                    item.btn.classList.add('bg-transparent', 'border-transparent', 'text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-850');
+                    item.btn.classList.remove('bg-emerald-950/55', 'border-emerald-500/35', 'text-emerald-300');
+                }
+            });
+            lucide.createIcons();
+        };
+
+        Object.keys(tabs).forEach(tabId => {
+            if (tabs[tabId].btn) {
+                tabs[tabId].btn.addEventListener('click', () => window.switchTab(tabId));
+            }
+        });
+
+
+        // ==================== AWARENESS LEARN CONTROLLER ====================
+        let activeTopicId = 'phishing';
+        const sidebarContainer = document.getElementById('topic-sidebar-buttons');
+
+        function renderSidebar() {
+            if (!sidebarContainer) return;
+            sidebarContainer.innerHTML = '';
+            
+            const topics = window.AWARENESS_TOPICS || [];
+            topics.forEach(topic => {
+                const isSelected = activeTopicId === topic.id;
+                const button = document.createElement('button');
+                button.className = `w-full flex items-center lg:items-start gap-3 p-3.5 rounded-xl border text-left transition-all shrink-0 lg:shrink cursor-pointer ${
+                    isSelected
+                        ? 'bg-emerald-950/50 border-emerald-500/30 text-emerald-300 shadow-[0_0_12px_-4px_rgba(16,185,129,0.2)]'
+                        : 'bg-transparent border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-850'
+                }`;
+                button.innerHTML = `
+                    <i data-lucide="${topic.icon}" class="h-4.5 w-4.5 mt-0.5 shrink-0 ${isSelected ? 'text-emerald-400' : 'text-slate-500'}"></i>
+                    <div class="flex flex-col text-left">
+                        <span class="text-xs md:text-sm font-semibold tracking-wide whitespace-nowrap lg:whitespace-normal font-sans">
+                            ${topic.title}
+                        </span>
+                        <span class="hidden lg:inline text-[10px] text-slate-500 line-clamp-1 mt-0.5 font-mono">
+                            ${topic.shortDesc || ''}
+                        </span>
+                    </div>
+                `;
+                button.addEventListener('click', () => {
+                    activeTopicId = topic.id;
+                    renderSidebar();
+                    renderActiveTopic();
+                });
+                sidebarContainer.appendChild(button);
+            });
+            lucide.createIcons();
+        }
+
+        function renderActiveTopic() {
+            const topics = window.AWARENESS_TOPICS || [];
+            const topic = topics.find(t => t.id === activeTopicId) || topics[0];
+            if (!topic) return;
+            
+            const activeIconEl = document.getElementById('active-icon');
+            if (activeIconEl) activeIconEl.setAttribute('data-lucide', topic.icon);
+            
+            const activeTitleEl = document.getElementById('active-title');
+            if (activeTitleEl) activeTitleEl.textContent = topic.title;
+            
+            const activeShortEl = document.getElementById('active-short');
+            if (activeShortEl) activeShortEl.textContent = topic.shortDesc;
+            
+            const activeContentEl = document.getElementById('active-content');
+            if (activeContentEl) activeContentEl.textContent = topic.fullContent;
+
+            // Render Attack vectors
+            const vulnContainer = document.getElementById('active-vulnerabilities');
+            if (vulnContainer) {
+                vulnContainer.innerHTML = '';
+                topic.vulnerabilities.forEach(v => {
+                    const item = document.createElement('div');
+                    item.className = 'bg-rose-950/10 border border-rose-500/10 rounded-xl p-3 text-xs text-rose-250 text-rose-300 leading-normal font-mono';
+                    item.textContent = v;
+                    vulnContainer.appendChild(item);
+                });
+            }
+
+            // Render Protective actions
+            const stratContainer = document.getElementById('active-strategies');
+            if (stratContainer) {
+                stratContainer.innerHTML = '';
+                topic.protectionSteps.forEach((step, idx) => {
+                    const item = document.createElement('div');
+                    item.className = 'bg-emerald-950/10 border border-emerald-500/10 rounded-xl p-3 text-xs text-emerald-250 text-emerald-300 leading-normal';
+                    item.innerHTML = `
+                        <div class="font-bold mb-1 font-mono text-[10px] text-emerald-400">STRATEGY ${idx + 1}</div>
+                        <div>${step}</div>
+                    `;
+                    stratContainer.appendChild(item);
+                });
+            }
+
+            // Render Quick Tips
+            const tipsContainer = document.getElementById('active-tips');
+            if (tipsContainer) {
+                tipsContainer.innerHTML = '';
+                topic.quickTips.forEach(tip => {
+                    const li = document.createElement('li');
+                    li.className = 'flex items-start gap-2.5 leading-relaxed';
+                    li.innerHTML = `
+                        <div class="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></div>
+                        <span>${tip}</span>
+                    `;
+                    tipsContainer.appendChild(li);
+                });
+            }
+            lucide.createIcons();
+        }
+
+        // Initialize learn section contents
+        renderSidebar();
+        renderActiveTopic();
+
+
+        // ==================== THREAT INCIDENTS LOCAL LOGGER CONTROLLER ====================
+        const dateInput = document.getElementById('report-date');
+        if (dateInput) {
+            dateInput.value = new Date().toISOString().split('T')[0];
+        }
+
+        let reportsList = [];
+
+        function loadReports() {
+            const saved = localStorage.getItem('safepk_threat_reports');
+            if (saved) {
+                try {
+                    reportsList = JSON.parse(saved);
+                } catch (e) {
+                    reportsList = [];
+                }
+            } else {
+                reportsList = [];
+            }
+            renderReports();
+        }
+
+        function saveReports() {
+            localStorage.setItem('safepk_threat_reports', JSON.stringify(reportsList));
+            renderReports();
+        }
+
+        function deleteReport(reportId) {
+            reportsList = reportsList.filter(item => item.id !== reportId);
+            saveReports();
+        }
+
+        function downloadReportSummary(reportId) {
+            const report = reportsList.find(r => r.id === reportId);
+            if (!report) return;
+
+            const content = `
+========================================
+ SAFEPK CYBER INCIDENT REPORT SUMMARY
+========================================
+Reference ID : ${report.referenceId}
+Report Title : ${report.title || 'Incomplete subject details'}
+Report Type  : ${report.reportType}
+Log Date     : ${report.date}
+Safety Status: Received [Local Stage Cache Only]
+
+Incident Description Details:
+-----------------------------
+${report.description}
+
+========================================
+Secure Offline Coordinates - SafePK Pakistan
+========================================
+            `;
+
+            const blob = new Blob([content.trim()], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `SafePK-Report-${report.referenceId}.txt`;
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function renderReports() {
+            const emptyState = document.getElementById('reports-empty-state');
+            const listContainer = document.getElementById('reports-render-list');
+            const countBadge = document.getElementById('reports-count-badge');
+            if (!listContainer || !emptyState || !countBadge) return;
+
+            countBadge.textContent = `${reportsList.length} saved`;
+
+            if (reportsList.length === 0) {
+                emptyState.classList.remove('hidden');
+                listContainer.innerHTML = '';
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            listContainer.innerHTML = '';
+
+            reportsList.forEach(report => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-950 border border-slate-850 p-4 rounded-xl space-y-3 hover:border-slate-800 transition-colors font-mono text-[11px]';
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div class="max-w-[75%]">
+                            <span class="text-xs font-sans font-bold text-white block truncate" title="${report.title || report.reportType}">${report.title || 'Incident Log'}</span>
+                            <span class="text-[9px] text-emerald-450 text-emerald-400 font-bold block mt-0.5">${report.reportType} | Ref: ${report.referenceId}</span>
+                        </div>
+                        <span class="px-2 py-0.5 bg-emerald-950/40 text-emerald-300 text-[9px] rounded font-bold shrink-0">${report.date}</span>
+                    </div>
+                    
+                    <p class="text-slate-400 font-sans text-xs leading-normal line-clamp-3">${report.description}</p>
+                    
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-900">
+                        <span class="text-[9px] text-emerald-500/80 uppercase font-bold flex items-center gap-1">
+                            <i data-lucide="clock" class="h-3 w-3 animate-pulse"></i> Logged Offline
+                        </span>
+                        <div class="flex items-center gap-2 select-none">
+                            <button class="download-btn p-1.5 text-slate-500 hover:text-white rounded-md transition-colors" title="Download summary plaintext card">
+                                <i data-lucide="download" class="h-3.5 w-3.5"></i>
+                            </button>
+                            <button class="delete-btn p-1.5 text-slate-500 hover:text-rose-450 hover:text-rose-400 rounded-md transition-colors" title="Delete threat tracking log">
+                                <i data-lucide="trash-2" class="h-3.5 w-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                card.querySelector('.download-btn').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    downloadReportSummary(report.id);
+                });
+                card.querySelector('.delete-btn').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    deleteReport(report.id);
+                });
+
+                listContainer.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+
+
+        // Bind Live Inputs
+        const titleInputEl = document.getElementById('report-title');
+        const typeInputEl = document.getElementById('report-type');
+        const dateInputEl = document.getElementById('report-date');
+        const descInputEl = document.getElementById('report-description');
+
+        if (titleInputEl) titleInputEl.addEventListener('input', updateComplaintDraft);
+        if (typeInputEl) typeInputEl.addEventListener('change', updateComplaintDraft);
+        if (dateInputEl) dateInputEl.addEventListener('input', updateComplaintDraft);
+        if (descInputEl) descInputEl.addEventListener('input', updateComplaintDraft);
+
+        // Bind Copy Button
+        const copyDraftBtn = document.getElementById('copy-draft-btn');
+        if (copyDraftBtn) {
+            copyDraftBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const text = document.getElementById('complaint-email-output').textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    const btnText = document.getElementById('copy-btn-text');
+                    const copyIcon = document.getElementById('copy-icon');
+                    if (btnText) btnText.textContent = "Copied! Perfect";
+                    if (copyIcon) {
+                        copyIcon.setAttribute('data-lucide', 'check');
+                        lucide.createIcons();
+                    }
+                    setTimeout(() => {
+                        if (btnText) btnText.textContent = "Copy Draft";
+                        if (copyIcon) {
+                            copyIcon.setAttribute('data-lucide', 'copy');
+                            lucide.createIcons();
+                        }
+                    }, 3000);
+                }).catch(err => {
+                    console.error("Clipboard copy failed: ", err);
+                });
+            });
+        }
+
+        // Handle incident logging form submit
+        const threatForm = document.getElementById('threat-report-form');
+        if (threatForm) {
+            threatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const typeEl = document.getElementById('report-type');
+                const dateEl = document.getElementById('report-date');
+                const descEl = document.getElementById('report-description');
+                const titleEl = document.getElementById('report-title');
+
+                if (!descEl || !descEl.value.trim() || !titleEl || !titleEl.value.trim()) return;
+
+                const randomNum = Math.floor(100000 + Math.random() * 900000);
+                const referenceId = `SPK-${randomNum}`;
+
+                const newReport = {
+                    id: `rep-${Date.now()}`,
+                    title: titleEl.value.trim(),
+                    reportType: typeEl.value,
+                    date: dateEl.value,
+                    description: descEl.value.trim(),
+                    referenceId
+                };
+
+                reportsList.unshift(newReport);
+                saveReports();
+
+                // Clear input fields
+                titleEl.value = '';
+                descEl.value = '';
+                dateEl.value = new Date().toISOString().split('T')[0];
+                updateComplaintDraft();
+            });
+        }
+
+        // Initial render of the draft
+        updateComplaintDraft();
+        loadReports();
+
+
+        // ==================== SECURE CONTACT FORM LOGIC ====================
+        const contactForm = document.getElementById('secure-contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const successPanel = document.getElementById('contact-success-panel');
+                if (successPanel) {
+                    successPanel.classList.remove('hidden');
+                }
+                document.getElementById('contact-name').value = '';
+                document.getElementById('contact-email').value = '';
+                document.getElementById('contact-subject').value = '';
+                document.getElementById('contact-message').value = '';
+                setTimeout(() => {
+                    if (successPanel) successPanel.classList.add('hidden');
+                }, 8000);
+            });
+        }
+    </script>
+</body>
+</html>

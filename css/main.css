@@ -1,0 +1,371 @@
+/* 
+   SafePK - Main Consolidated Stylesheet
+   Urdu Comment: SafePK main layout, components, aur mobile responsive settings ka aik consolidated pro control hub jis mey Roman Urdu comments aur clean specifications shamil hain.
+   Author: SafePK Platform Engineering
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    background-color: #020617; /* Slate-950 */
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #020617;
+    color: #f1f5f9;
+}
+
+/* Custom fade entrance transition animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide webkit default range sliders borders */
+input[type="range"]::-webkit-slider-thumb {
+    transition: transform 0.15s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* Custom scroll bar styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* 
+   Urdu Comment: Custom interactive items range controller aur scrollbars align karne k custom rules.
+*/
+
+/* Custom Range Input Appearance cleanups */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #0f172a; /* Slate 900 */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #10b981; /* Emerald-500 */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #10b981;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    border: none;
+}
+
+/* Custom Checkbox elements accent color styling */
+input[type="checkbox"] {
+    accent-color: #10b981;
+}
+
+/* Scrollbar behaviors for custom tables scroll grids */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 
+   Urdu Comment: Mobile screening aur dense grids layout adjustment settings displays k mutabiq.
+*/
+@media (max-width: 640px) {
+    /* Touch optimization rules for tiny smartphone arrays */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Enlarge touch targets as requested by security guidelines */
+    a, button, select, input[type="checkbox"] {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* ==========================================
+   BLACK & WHITE HIGH-CONTRAST LIGHT THEME
+   ========================================== */
+body.light-mono {
+    background-color: #f8fafc !important;
+    background-image: none !important;
+    color: #1e293b !important;
+}
+
+body.light-mono html {
+    background-color: #f8fafc !important;
+}
+
+body.light-mono nav {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02) !important;
+}
+
+body.light-mono nav a.text-slate-300,
+body.light-mono #mobile-menu a.text-slate-300 {
+    color: #475569 !important;
+    background-color: transparent !important;
+}
+
+body.light-mono nav a.text-slate-300:hover,
+body.light-mono #mobile-menu a.text-slate-300:hover {
+    color: #0f172a !important;
+    background-color: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+}
+
+body.light-mono nav a.bg-emerald-950\/65,
+body.light-mono #mobile-menu a.bg-emerald-950\/80 {
+    background-color: #ecfdf5 !important;
+    border-color: #059669 !important;
+    color: #047857 !important;
+    box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.12) !important;
+}
+
+body.light-mono .bg-slate-950,
+body.light-mono .bg-slate-900,
+body.light-mono .bg-slate-900\/90,
+body.light-mono .bg-slate-900\/50,
+body.light-mono .bg-slate-850,
+body.light-mono .bg-slate-800\/40,
+body.light-mono .bg-slate-900\/40,
+body.light-mono .bento-grid-panel,
+body.light-mono #tools-tab-content > div {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 10px 30px -3px rgba(148, 163, 184, 0.12), 0 4px 12px -2px rgba(148, 163, 184, 0.06) !important;
+}
+
+body.light-mono .bg-slate-950\/60,
+body.light-mono .bg-slate-800\/50,
+body.light-mono .bg-slate-850\/50,
+body.light-mono .bg-slate-900\/30,
+body.light-mono .p-5,
+body.light-mono .p-6,
+body.light-mono .bg-slate-950\/40 {
+    background-color: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+}
+
+body.light-mono input[type="range"] {
+    background: #e2e8f0 !important;
+}
+
+body.light-mono .bg-gradient-to-t {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.6), transparent) !important;
+}
+
+body.light-mono .bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.6), transparent) !important;
+}
+
+body.light-mono .bg-gradient-to-r {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.6), transparent) !important;
+}
+
+body.light-mono .text-transparent.bg-clip-text {
+    color: #047857 !important;
+    background-image: none !important;
+    -webkit-text-fill-color: #047857 !important;
+}
+
+body.light-mono .text-white,
+body.light-mono .text-slate-100,
+body.light-mono .text-slate-200,
+body.light-mono .text-slate-300 {
+    color: #0f172a !important;
+}
+
+body.light-mono .text-slate-400 {
+    color: #475569 !important;
+}
+
+body.light-mono .text-slate-500 {
+    color: #64748b !important;
+}
+
+body.light-mono .text-emerald-400 {
+    color: #059669 !important;
+}
+
+body.light-mono .text-emerald-300 {
+    color: #047857 !important;
+}
+
+body.light-mono .border-slate-800,
+body.light-mono .border-slate-850,
+body.light-mono .border-slate-705,
+body.light-mono .border-slate-700\/50,
+body.light-mono .border-slate-800\/50,
+body.light-mono .border-slate-900,
+body.light-mono .border-emerald-500\/20,
+body.light-mono .border-emerald-500\/10,
+body.light-mono .border-emerald-500\/15,
+body.light-mono .border-emerald-500\/30 {
+    border-color: #e2e8f0 !important;
+}
+
+body.light-mono input,
+body.light-mono select,
+body.light-mono textarea,
+body.light-mono select option {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+body.light-mono ::placeholder,
+body.light-mono input::placeholder,
+body.light-mono textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.light-mono input:focus,
+body.light-mono select:focus,
+body.light-mono textarea:focus {
+    border-color: #059669 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2.5px rgba(5, 150, 105, 0.15) !important;
+}
+
+body.light-mono input[type="checkbox"] {
+    accent-color: #059669 !important;
+}
+
+body.light-mono .bg-emerald-955\/30,
+body.light-mono .bg-emerald-950\/40,
+body.light-mono .bg-emerald-950\/25,
+body.light-mono .bg-emerald-950\/30,
+body.light-mono .bg-emerald-950\/20,
+body.light-mono .bg-emerald-950\/80,
+body.light-mono .bg-emerald-900\/10,
+body.light-mono .bg-emerald-955/30,
+body.light-mono .bg-emerald-950/40,
+body.light-mono .bg-emerald-950/20,
+body.light-mono .bg-emerald-950/66 {
+    background-color: #ecfdf5 !important;
+    border-color: #a7f3d0 !important;
+    color: #047857 !important;
+}
+
+body.light-mono .bg-emerald-600 {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+}
+
+body.light-mono .bg-emerald-600:hover {
+    background-color: #047857 !important;
+}
+
+body.light-mono .bg-rose-500\/10,
+body.light-mono .bg-rose-950\/25,
+body.light-mono .bg-rose-950\/30 {
+    background-color: #fef2f2 !important;
+    border-color: #fca5a5 !important;
+    color: #b91c1c !important;
+}
+
+body.light-mono .text-rose-400 {
+    color: #b91c1c !important;
+}
+
+body.light-mono .bg-amber-500\/10,
+body.light-mono .bg-amber-955\/20,
+body.light-mono .bg-amber-950\/20 {
+    background-color: #fffbeb !important;
+    border-color: #fde68a !important;
+    color: #b45309 !important;
+}
+
+body.light-mono .text-amber-400 {
+    color: #b45309 !important;
+}
+
+body.light-mono .chk-filter-btn {
+    border-color: #e2e8f0 !important;
+}
+
+body.light-mono .hover\:text-slate-200:hover {
+    color: #0f172a !important;
+}
+
+body.light-mono .hover\:bg-slate-850:hover,
+body.light-mono .hover\:bg-slate-900:hover,
+body.light-mono .hover\:bg-slate-950:hover {
+    background-color: #e2e8f0 !important;
+}
+
+body.light-mono details div,
+body.light-mono details .bg-slate-950 {
+    background-color: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+    color: #334155 !important;
+}
+
+body.light-mono #theme-swap-btn,
+body.light-mono #theme-swap-mobile-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #475569 !important;
+}
+
+body.light-mono #theme-swap-btn:hover,
+body.light-mono #theme-swap-mobile-btn:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+body.light-mono ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+body.light-mono ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+}
+
+body.light-mono ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
