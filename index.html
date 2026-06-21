@@ -1206,13 +1206,95 @@
             <p class="font-bold text-slate-300">NCCIA Helpline</p>
             <p>Call 1991 (Toll Free)</p>
             <p class="text-[10px] text-emerald-500/80">
-                mailto:helpdesk@nccia.gov.pk
+                helpdesk@nccia.gov.pk
             </p>
         </div>
     </div>
 </div>
 
-            
+            // Standardized NCCIA and PKCERT cybercrime widget template to insert dynamically inside every view
+const fiaHelplineTemplate = `
+<div class="space-y-4">
+<div class="flex items-center gap-2 font-mono text-[10px] text-slate-500 uppercase font-black tracking-widest">
+<i data-lucide="shield-alert" class="h-4 w-4 text-emerald-400"></i>
+<span>Pakistan Cyber Incident Response & Investigation Coordination</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Agency 1: FIA & NCCIA -->
+<div class="p-5 rounded-xl bg-slate-900 border border-emerald-500/10 hover:border-emerald-500/20 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="p-2 bg-rose-500/10 border border-rose-500/15 text-rose-450 text-rose-405 text-rose-400 rounded-lg">
+<i data-lucide="phone-call" class="h-4.5 w-4.5 animate-pulse"></i>
+</span>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="text-xs font-bold text-white uppercase font-mono">FIA & NCCIA</h4>
+<span class="px-1.5 py-0.5 bg-rose-500/10 text-[8px] text-rose-400 font-mono rounded font-medium">Investigation</span>
+</div>
+<span class="text-[9px] text-slate-500 font-mono block">National Cyber Crime Agency</span>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-normal font-sans">
+Report financial scams, EasyPaisa / JazzCash frauds, identity theft, cyberstalking, and blackmailing to the Federal Investigation Agency (FIA) / National Cyber Crime Investigation Agency (NCCIA).
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-950">
+<a href="tel:1991" class="px-2.5 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+<i data-lucide="phone" class="h-3 w-3"></i>
+<span>Dial 1991</span>
+</a>
+<a href="mailto:helpdesk@nccia.gov.pk" class="px-2.5 py-1.5 bg-slate-950 hover:bg-slate-850 text-slate-300 font-mono text-[10px] rounded border border-slate-800 transition-colors flex items-center gap-1">
+<i data-lucide="mail" class="h-3 w-3 text-slate-500"></i>
+<span>helpdesk@nccia.gov.pk</span>
+</a>
+<a href="https://complaint.fia.gov.pk/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
+<i data-lucide="external-link" class="h-3 w-3"></i>
+<span>FIA Portal</span>
+</a>
+</div>
+</div>
+
+<!-- Agency 2: PKCERT -->  
+                <div class="p-5 rounded-xl bg-slate-900 border border-emerald-500/10 hover:border-emerald-500/20 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300">  
+                    <div class="space-y-2">  
+                        <div class="flex items-center gap-2">  
+                            <span class="p-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-lg">  
+                                <i data-lucide="shield-check" class="h-4.5 w-4.5"></i>  
+                            </span>  
+                            <div>  
+                                <div class="flex items-center gap-1.5">  
+                                    <h4 class="text-xs font-bold text-white uppercase font-mono">PKCERT (National CERT)</h4>  
+                                    <span class="px-1.5 py-0.5 bg-emerald-500/10 text-[8px] text-emerald-400 font-mono rounded font-medium">Mitigation</span>  
+                                </div>  
+                                <span class="text-[9px] text-slate-500 font-mono block">Pakistan Computer Emergency Response Team</span>  
+                            </div>  
+                        </div>  
+                        <p class="text-xs text-slate-400 leading-normal font-sans">  
+                            Coordinator for computer security incidents, threat detection, high-critical vulnerability scanning, and cybersecurity alerts monitoring to defend national computing assets.  
+                        </p>  
+                    </div>  
+                    <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-950 mt-auto">  
+                        <a href="mailto:info@pkcert.gov.pk" class="px-2.5 py-1.5 bg-slate-950 hover:bg-slate-850 text-emerald-300 border border-emerald-500/20 font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">  
+                            <i data-lucide="mail" class="h-3 w-3 text-emerald-400"></i>  
+                            <span>info@pkcert.gov.pk</span>  
+                        </a>  
+                        <a href="https://www.pkcert.gov.pk/" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">  
+                            <i data-lucide="external-link" class="h-3 w-3"></i>  
+                            <span>PKCERT Portal</span>  
+                        </a>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    `;
+
+const homeFiaBanner = document.querySelector('#view-home .fia-banner-element');
+
+if (homeFiaBanner) {
+homeFiaBanner.innerHTML = fiaHelplineTemplate;
+
+
 
             <!-- Base status and copyright alignment -->
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-500">
@@ -1239,98 +1321,7 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
 
-        // Standardized NCCIA cybercrime widget template
-const fiaHelplineTemplate = `
-    <div class="space-y-4">
-        <div class="flex items-center gap-2 font-mono text-[10px] text-slate-500 uppercase font-black tracking-widest">
-            <i data-lucide="shield-alert" class="h-4 w-4 text-emerald-400"></i>
-            <span>Pakistan Cyber Incident Response & Investigation Coordination</span>
-        </div>
-
-        <div class="grid grid-cols-1 gap-4">
-
-            <!-- Agency: NCCIA -->
-            <div class="p-5 rounded-xl bg-slate-900 border border-emerald-500/10 hover:border-emerald-500/20 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300">
-
-                <div class="space-y-2">
-
-                    <div class="flex items-center gap-2">
-
-                        <span class="p-2 bg-rose-500/10 border border-rose-500/15 text-rose-400 rounded-lg">
-                            <i data-lucide="phone-call" class="h-4 w-4 animate-pulse"></i>
-                        </span>
-
-                        <div>
-                            <div class="flex items-center gap-1.5">
-                                <h4 class="text-xs font-bold text-white uppercase font-mono">
-                                    NCCIA
-                                </h4>
-
-                                <span class="px-1.5 py-0.5 bg-rose-500/10 text-[8px] text-rose-400 font-mono rounded font-medium">
-                                    Investigation
-                                </span>
-                            </div>
-
-                            <span class="text-[9px] text-slate-500 font-mono block">
-                                National Cyber Crime Investigation Agency
-                            </span>
-                        </div>
-
-                    </div>
-
-
-                    <p class="text-xs text-slate-400 leading-normal font-sans">
-                        Report cyber frauds, online scams, identity theft, cyberstalking, harassment, and other cybercrime incidents to NCCIA.
-                    </p>
-
-                </div>
-
-
-                <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-950">
-
-                    <a href="tel:1991"
-                    class="px-2.5 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
-
-                        <i data-lucide="phone" class="h-3 w-3"></i>
-                        <span>Dial 1991</span>
-
-                    </a>
-
-
-                    <a href="mailto:helpdesk@nccia.gov.pk"
-                    class="px-2.5 py-1.5 bg-slate-950 hover:bg-slate-850 text-slate-300 font-mono text-[10px] rounded border border-slate-800 transition-colors flex items-center gap-1">
-
-                        <i data-lucide="mail" class="h-3 w-3 text-slate-500"></i>
-                        <span>Email NCCIA</span>
-
-                    </a>
-
-
-                    <a href="https://complaint.nccia.gov.pk/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-2.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[10px] font-bold rounded transition-colors flex items-center gap-1">
-
-                        <i data-lucide="external-link" class="h-3 w-3"></i>
-                        <span>NCCIA Portal</span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-`;
-
-
-const homeFiaBanner = document.querySelector('#view-home .fia-banner-element');
-
-if (homeFiaBanner) {
-    homeFiaBanner.innerHTML = fiaHelplineTemplate;
-        }
-}
+        
 
         // ==================== TOOLS TAB SWITCHER LOGIC ====================
         const tabs = {
