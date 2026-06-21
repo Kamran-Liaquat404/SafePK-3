@@ -1678,7 +1678,37 @@ Secure Offline Coordinates - SafePK Pakistan
                 }, 8000);
             });
         }
-            <script>
+
+        <!-- ==================== SECURE CONTACT FORM LOGIC ==================== -->
+<script>
+const contactForm = document.getElementById('secure-contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const successPanel = document.getElementById('contact-success-panel');
+
+        if (successPanel) {
+            successPanel.classList.remove('hidden');
+        }
+
+        document.getElementById('contact-name').value = '';
+        document.getElementById('contact-email').value = '';
+        document.getElementById('contact-subject').value = '';
+        document.getElementById('contact-message').value = '';
+
+        setTimeout(() => {
+            if (successPanel) {
+                successPanel.classList.add('hidden');
+            }
+        }, 8000);
+    });
+        }
+
+
+<!-- ==================== ADSTERRA AD ==================== -->
+<script>
   atOptions = {
     'key' : 'fa59f8c8a04bf191f0e1465d7d0741b9',
     'format' : 'iframe',
@@ -1687,7 +1717,8 @@ Secure Offline Coordinates - SafePK Pakistan
     'params' : {}
   };
 </script>
+
 <script src="https://www.highperformanceformat.com/fa59f8c8a04bf191f0e1465d7d0741b9/invoke.js"></script>
-    
+
 </body>
 </html>
